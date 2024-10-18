@@ -20,7 +20,7 @@ include('main/conn.php');
   $password = mysqli_real_escape_string($conn, $_POST['password']);
   
   // Query database for user with given username and password
-  $query = "SELECT * FROM admin WHERE username='$username'";
+  $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
 	
   $result = mysqli_query($conn, $query);
   
